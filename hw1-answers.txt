@@ -1,0 +1,86 @@
+1)
+
+NOTE: Missing values were NOT removed from dataset to calculate following output
+
+ISE:
+  Mean: 0.00155222542164179
+  Median: 0.0026426355
+  Mode: "numeric"
+  SD: 0.0211219253351342
+  Var: 0.0004461357
+
+SP:
+  Mean: 0.000643299091417911
+  Median: 0.000876353
+  Mode: "numeric"
+  SD: 0.0140929595239576
+  Var: 0.000198611508143907
+
+DAX:
+  Mean: 0.000720797725746269
+  Median: 0.0008874895
+  Mode: numeric
+  SD: 0.0145571720544777
+  Var: 0.000211911258223667
+
+FTSE:
+  Mean: 0.000510277348880597
+  Median: 0.000408628
+  Mode: numeric
+  SD: 0.0126556887697553
+  Var: 0.000160166458236911
+
+NIKKEI:
+  Mean: 0.000307714496268657
+  Median: 0 				???
+  Mode: numeric
+  SD: 0.0148501259031798
+  Var: 0.000220526239340292
+
+BOVESPA
+  Mean: 0.000935332744402985
+  Median: 0.0002789745
+  Mode: numeric
+  SD: 0.0157505407693313
+  Var: 0.000248079534526369
+
+EU:
+  Mean: 0.000470581054104478
+  Median: 0.000195811
+  Mode: numeric
+  SD: 0.0129900198811049
+  Var: 0.0001687406165115
+
+EM:
+  Mean: 0.000935935585820896
+  Median: 0.001077146
+  Mode: numeric
+  SD: 0.0105011505857486
+  Var: 0.000110274163624569
+
+2)
+Outliers can be spotted on the boxplots
+See box plots in other files attached to this submission
+Provided an example outlier calculator in script
+
+3)
+Q-Q Plot attached. Has 5 points plotted instead of 4, bottom left data point is the min, the rest are the quartiles.
+
+
+
+4)
+Upon inspection of the plot there is a positive, linear correlation between the two datasets. 
+
+The cor command returns a value [0,1] higher value = higher chance of correlation. 
+> cor(mydata[1], mydata[8])
+           EM
+ISE 0.7019538
+
+A result of 0.7 is enough to conclude that there is indeed a correlation.
+
+5)
+> cor(mydata[5], mydata[6])
+         BOVESPA
+NIKKEI 0.1727524
+
+There is very little correlation between Brazil and Japan stock exchanges.
